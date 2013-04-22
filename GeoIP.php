@@ -73,9 +73,6 @@ class GeoIP
     }
     
     
-
-    
-    
     /**
      * Gera a url de consulta e recupera as informações de localização do IP
      * @uses GeoIP::makeLocation() Para recuperar as informações de localização do IP
@@ -140,7 +137,6 @@ class GeoIP
      */
     private function returnCsv()
     {
-        echo $this->location; exit();
         $arrReturn = array();
         $arrReturn = explode(",",$this->location); 
         return $arrReturn;
