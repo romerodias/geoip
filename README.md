@@ -8,6 +8,7 @@ Exemplo de utilização
 
 
 <?php
+
     try{
         $geoIP = new GeoIP();
         $arrLocation = $geoIP->getLocation();
