@@ -5,8 +5,8 @@ Classe que possui a responsabilidade de retornar os dados de localização de um
 ----
 
 Exemplo de utilização
-----
-<php?
+
+<?php
     try{
         $geoIP = new GeoIP();
         $arrLocation = $geoIP->getLocation();
