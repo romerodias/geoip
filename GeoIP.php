@@ -1,7 +1,21 @@
 <?php
 /** 
- * @author Administrador
+ * Esta classe possui responsabilidade de retornar os dados de localização de um IP
  * 
+ * @author Romero Gonçalves Dias
+ * @filesource GeoIP.php
+ * @copyright 2013 RD Tecnologia
+ *  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details:
+ * http://www.gnu.org/licenses/gpl.html 
  * 
  */
 class GeoIP
@@ -13,6 +27,20 @@ class GeoIP
     private $location;
     private $allowedReturnType = array('xml','json','csv');
     
+    
+    /**
+     * Construtor
+     * Recupera o ip constroi a url da requisição
+     * @param string $ip Ip a ser analisado
+     */
+    public function GeoIP($ip = '')
+    {
+        if($ip) //Caso algum ip for informado
+            $this->setIp($ip)->makeUrl(); //Atribui o ip e gera a url de consulta
+        else    
+            $this->makeUrl();  //Caso nenhum ip for informado gera url de consulta
+    }
+
     
     /**
      * Atribuir um ip manualmente
@@ -45,18 +73,7 @@ class GeoIP
     }
     
     
-    /**
-     * Construtor
-     * Recupera o ip constroi a url da requisição
-     * @param string $ip Ip a ser analisado
-     */
-    public function GeoIP($ip = '')
-    {
-        if($ip) //Caso algum ip for informado
-            $this->setIp($ip)->makeUrl(); //Atribui o ip e gera a url de consulta
-        else    
-            $this->makeUrl();  //Caso nenhum ip for informado gera url de consulta
-    }
+
     
     
     /**
