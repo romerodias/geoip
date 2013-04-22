@@ -20,6 +20,8 @@ Exemplo de utilização
 ?>
     
 O trecho de código acima irá retornar
+
+
 Array
 (
     [ip] => 189.13.172.91
