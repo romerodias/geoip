@@ -6,6 +6,7 @@ Classe que possui a responsabilidade de retornar os dados de localização de um
 
 Exemplo de utilização
 
+
 <?php
     try{
         $geoIP = new GeoIP();
