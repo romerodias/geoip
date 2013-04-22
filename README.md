@@ -1,4 +1,3 @@
-
 Classe que possui a responsabilidade de retornar os dados de localização de um IP
 
 
@@ -8,7 +7,7 @@ Exemplo
         $geoIP = new GeoIP();
         $arrLocation = $geoIP->getLocation();
         print_r($arrLocation);
-    }
+        }
     catch(Exception $e){
         echo $e->getMessage();
     }
